@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" href="https://media.discordapp.net/attachments/782206675255427072/930479784981573662/image-removebg-preview.png">
+  <link rel="icon"
+    href="https://media.discordapp.net/attachments/782206675255427072/930479784981573662/image-removebg-preview.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
@@ -17,16 +18,25 @@
 
 </head>
 
+<style>
+  img{
+    width:75%;
+    }
+</style>
+
 <header class="site-header">
   <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top" style="background-color: #191c31;">
     <div class="container">
-      <a class="navbar-brand mr-4" href="/">Cape Castle Search</a>
+      <a class="navbar-brand" href="/" style=>
+        <img
+          src="https://media.discordapp.net/attachments/782206675255427072/930515453367947354/unknown.png">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
         data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false"
         aria-label="Toggle navigation" style="margin-right:15px">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarToggle">
+      <div class="collapse navbar-collapse " id="navbarToggle">
         <div class="navbar-nav mr-auto">
           <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
           <a class="nav-item nav-link" href="{{ url_for('car') }}">Car</a>
@@ -68,4 +78,5 @@
     crossorigin="anonymous"></script>
 
 </body>
+
 </html>
