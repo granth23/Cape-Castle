@@ -49,7 +49,7 @@ def car():
                 p.append(f"Intercom: {i[1]}")
                 posts.append(p)
         if posts == []:
-            posts.append("Car Not Available")
+            posts.append(["Car Number Not Available"])
         return render_template('car.html', title = 'Request car Data', form = form, posts = posts)
     else:
         posts = []
@@ -66,13 +66,13 @@ def park():
             if park_data in i[2]:
                 p = []
                 p.append(f"Flat Number: {i[0]}")
-                p.append(f"Car Number: {i[2]}")
+                p.append(f"Parking Number: {i[2]}")
                 p.append(f"Intercom: {i[1]}")
                 posts.append(p)
             if park_data in i[3]:
                 p = []
                 p.append(f"Flat Number: {i[0]}")
-                p.append(f"Car Number: {i[3]}")
+                p.append(f"Parking Number: {i[3]}")
                 p.append(f"Intercom: {i[1]}")
                 posts.append(p)
         if posts == []:
