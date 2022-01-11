@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Request Data from Car Number</legend>
+            <div class="form-group">
+                {{ form.car.label(class="form-control-label") }}
+                {% if form.car.errors %}
+                {{ form.car(class="form-control form-control-lg is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.car.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.car(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-outline-dark") }}
+        </div>
+    </form>
+
+    {% for post in posts %}
+    <article class="media content-section">
+        <div class="media-body">
+            {% for p in post %}
+            {{ p }}
+            <br>
+            {% endfor %}
+        </div>
+    </article>
+    {% endfor %}
+
+
+    {% endblock content %}
