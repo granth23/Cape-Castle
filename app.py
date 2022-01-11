@@ -76,7 +76,7 @@ def park():
                 p.append(f"Intercom: {i[1]}")
                 posts.append(p)
         if posts == []:
-            posts.append("Parking Number Not Available")
+            posts.append(["Parking Number Not Available"])
         return render_template('park.html', title = 'Request car Data', form = form, posts = posts)
     else:
         posts = []
