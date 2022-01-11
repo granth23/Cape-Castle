@@ -28,6 +28,11 @@ def home():
     return render_template('home.html')
 
 
+@app.route("/contact")
+def contact():
+    return render_template('contact.html')
+
+
 @app.route("/car", methods=['GET', 'POST'])
 def car():
     form = CarForm()
