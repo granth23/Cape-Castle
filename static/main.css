@@ -79,45 +79,6 @@ a.article-title:hover {
   font-size: 2.5rem;
 }
 
-.button {
-  border-radius: 4px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  ;
-  color: #000;
-  text-align: center;
-  font-size: 16px;
-  padding: 5px;
-  width: 100%;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
 
 .navbar {
   position: relative;
@@ -127,4 +88,179 @@ a.article-title:hover {
 
 .navbar-brand{
   margin-right: 0rem;
+}
+
+.nav-item{
+  margin-right: 20px;
+}
+
+body{
+  background-color: #ffffff;
+}
+
+
+.al {
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+}
+
+.al::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 12.5%;
+  width: 75%;
+  height: 0.1em;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.al:hover::after,
+.al:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+
+.bups{
+  width: 98%;
+  background-color: #adbed6;
+  font-weight: 700;
+  margin: 1%;
+  padding: 4%;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 2px transparent;
+  box-shadow: 0 0 10px #262a49d5;
+  margin-bottom: 2%;
+}
+
+.ihome{
+  width:100%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.vl {
+  border-left: 6px solid green;
+  height: 500px;
+}
+
+.buttonn {
+  border-radius: 15px;
+  background-color: #fff;
+  /* border: 2px transparent; */
+  color: #262a49;
+  text-align: center;
+  font-size: 130%;
+  display: inline-block;
+  width:46%;
+  padding: 15%;
+  margin: 2%;
+  font-weight: 700;
+  box-shadow: 0 0 20px #262a49d5;
+}
+
+.buttonn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.hrr{
+  height:2px;
+  background-color: #3d3f4ea1;
+  width:98%;
+  margin-right: 1%;
+}
+
+.bup{
+  width: 96%;
+  color: #3b4174;
+  margin-right:2%;
+  background-color: #adbed6;
+  font-weight: 700;
+  padding: 5%;
+  border-radius: 10px;
+  border: 2px transparent;
+}
+
+
+.buttonn:hover {
+	transition: all 0.25s;
+  color: #262a49;
+  transform: scale(1.05);
+}
+
+.bup:hover {
+	transition: all 0.25s;
+  color: #262a49;
+  transform: scale(1.05);
+}
+
+.bupp:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #262a49d5;
+	transition: all 0.25s;
+  color: #262a49;
+
+}
+
+
+.container-nav{
+  width: 65%;
+}
+
+@media only screen and (max-width: 1125px) {
+  .container-nav{
+    width:85%
+  }
+}
+
+
+@media only screen and (max-width: 850px) {
+  a.navbar-brand{
+    margin-right: 0rem;
+    width: 40%;
+  }
+  .buttonn {
+    width: 46%;
+    margin: 2%;
+    padding: 10%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+  }
+  .ihome{
+    width:100%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .bup{
+    width: 98%;
+    margin-right:1%;
+    background-color: #adbed6;
+    font-weight: 700;
+    padding: 5%;
+    border-radius: 10px;
+    border: 2px transparent;
+  }
+  .container-nav{
+    width:100%
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  a.navbar-brand{
+    margin-right: 0rem;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  a.navbar-brand{
+    width: 70%;
+  }
 }

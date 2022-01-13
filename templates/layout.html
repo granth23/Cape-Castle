@@ -26,7 +26,7 @@
 
 <header class="site-header">
   <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top" style="background-color: #191c31;">
-    <div class="container">
+    <div class="container container-nav">
       <a class="navbar-brand" href="/" style=>
         <img
           src="https://media.discordapp.net/attachments/782206675255427072/930515453367947354/unknown.png">
@@ -36,22 +36,21 @@
         aria-label="Toggle navigation" style="margin-right:15px">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse " id="navbarToggle">
-        <div class="navbar-nav mr-auto">
-          <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
-          <a class="nav-item nav-link" href="{{ url_for('car') }}">Car</a>
-          <a class="nav-item nav-link" href="{{ url_for('park') }}">Park</a>
-          <a class="nav-item nav-link" href="{{ url_for('emergency') }}">Emergency No.</a>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link al" href="{{ url_for('home') }}">Home</a>
+          <a class="nav-item nav-link al" href="{{ url_for('car') }}">Car</a>
+          <a class="nav-item nav-link al" href="{{ url_for('park') }}">Park</a>
+          <a class="nav-item nav-link al" href="{{ url_for('emergency') }}">Emergency No.</a>
         </div>
       </div>
     </div>
   </nav>
 </header>
 
-<body style="background-image:url('static/Layer.png');">
+<body>
   <main role="main" class="container">
     <div class="row">
-      <div class="col-md-8">
         {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
         {% for category, message in messages %}
@@ -62,10 +61,8 @@
         {% endif %}
         {% endwith %}
         {% block content %}{% endblock %}
-      </div>
     </div>
   </main>
-
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
