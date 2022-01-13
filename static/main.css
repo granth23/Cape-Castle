@@ -212,6 +212,10 @@ body{
   color: #262a49;
 }
 
+iframe {
+  width: 100%;
+  height: 85vh;
+}
 
 .container-nav{
   width: 65%;
