@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="content-section">
+<div class="ihome content-section">
     <form method="POST" action="">
         {{ form.hidden_tag() }}
         <fieldset class="form-group">
@@ -20,8 +20,8 @@
             </div>
         </fieldset>
         <div class="form-group">
-            <button href="#" class="bup bupp">
-            <span>{{ form.submit(style="background-color:transparent; border:none") }}</span>
+            <button href="#" class="bup bupp" style="width:100%; padding-top:3%; padding-bottom:3%">
+            <span>{{ form.submit(style="background-color:transparent; border:none;") }}</span>
             </button>
         </div>
     </form>

@@ -181,7 +181,7 @@ body{
   width: 96%;
   color: #3b4174;
   margin-right:2%;
-  background-color: #adbed6;
+  background-color: #c0d3ee8a;
   font-weight: 700;
   padding: 5%;
   border-radius: 10px;
@@ -201,12 +201,15 @@ body{
   transform: scale(1.05);
 }
 
+.bupp{
+  background-color: #adbed68a;
+}
+
 .bupp:hover {
-  transform: scale(1.05);
+  transform: scale(1.0);
   box-shadow: 0 0 10px #262a49d5;
 	transition: all 0.25s;
   color: #262a49;
-
 }
 
 
