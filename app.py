@@ -54,7 +54,7 @@ def car():
                 p.append(f"Intercom: {i[1]}")
                 posts.append(p)
         if posts == []:
-            posts.append(["Car Number Not Available"])
+            posts.append(["Number not found in database","Needs updation by owner"])
         return render_template('car.html', title = 'Request car Data', form = form, posts = posts)
     else:
         posts = []
@@ -81,7 +81,7 @@ def park():
                 p.append(f"Intercom: {i[1]}")
                 posts.append(p)
         if posts == []:
-            posts.append(["Parking Number Not Available"])
+            posts.append(["Number not found in database","Needs updation by owner"])
         return render_template('park.html', title = 'Request car Data', form = form, posts = posts)
     else:
         posts = []
